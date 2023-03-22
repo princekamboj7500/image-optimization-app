@@ -140,7 +140,7 @@ export default function HomePage() {
           </Card>
         </Layout.Section>
         <Layout.Section oneThird>
-          <Card title="Account Overview" actions={[{content: 'Manage'}]}>
+          <Card title="Account Overview" actions={[{content: 'Settings'}]}>
             <Card.Section>
               <p color="subdued" as="span">
                 1931 units available
