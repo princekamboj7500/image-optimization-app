@@ -6,13 +6,14 @@ import {
   Thumbnail,
   CalloutCard,
 } from "@shopify/polaris";
-import { TitleBar } from "@shopify/app-bridge-react";
+import { TitleBar, useNavigate } from "@shopify/app-bridge-react";
 
 import { trophyImage } from "../assets";
 
 import { ProductsCard } from "../components";
 
 export default function HomePage() {
+  const navigate = useNavigate();
   return (
     <Page
       title={<div><h1>Image Optimizer Dashboard</h1><p style={{fontSize:"14px"}}>With its best-in-class algorithms Image Optimizer gives you an incredible level of image compression and optimization.</p></div>}
@@ -140,7 +141,7 @@ export default function HomePage() {
           </Card>
         </Layout.Section>
         <Layout.Section oneThird>
-          <Card title="Account Overview" actions={[{content: 'Settings'}]}>
+          <Card title="Account Overview" actions={[{content: 'Settings', onAction: navigate("/settings") }]}>
             <Card.Section>
               <p color="subdued" as="span">
                 1931 units available
